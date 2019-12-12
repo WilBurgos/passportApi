@@ -22,6 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('api-login', 'Api/LoginController@login')->name('api.login');
+
 Route::get('posts', function(){
     // return Post::all();
     // return Role::all();

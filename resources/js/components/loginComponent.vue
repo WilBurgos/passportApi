@@ -6,7 +6,7 @@
                     <div class="card-header">Login Component</div>
 
                     <div class="card-body">
-                        <form>
+                        <form method="POST" :action="postlogin">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">Correo:</label>
 
@@ -53,6 +53,9 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        props:{
+            postlogin:'',
         },
         methods:{
             
